@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initGalleryLightbox();
   initPriceFilter();
   initBackToTop();
+  initFaqAccordion();
 });
 
 /* ==========================================================================
@@ -249,3 +250,44 @@ function initBackToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+/* ==========================================================================
+   6. Veelgestelde Vragen (FAQ) Accordion
+   ========================================================================== */
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const btn = item.querySelector('.faq-button');
+    const content = item.querySelector('.faq-content');
+    if (!btn || !content) return;
+
+    btn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // Sluit eventueel andere geopende items voor een clean overzicht
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item && otherItem.classList.contains('active')) {
+          otherItem.classList.remove('active');
+          const otherContent = otherItem.querySelector('.faq-content');
+          const otherBtn = otherItem.querySelector('.faq-button');
+          if (otherContent) otherContent.style.maxHeight = null;
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle het huidige item
+      if (isActive) {
+        item.classList.remove('active');
+        content.style.maxHeight = null;
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
+
