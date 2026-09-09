@@ -1,0 +1,5 @@
+# Robots.txt voor Sylvia's Hairdesign
+User-agent: *
+Allow: /
+
+Sitemap: https://www.sylviashairdesign.nl/sitemap.xml
