@@ -31,6 +31,9 @@
   <!-- Favicon & Touch Icon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a37a44' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='6' cy='6' r='3'/%3E%3Cpath d='M8.12 8.12 12 12'/%3E%3Cpath d='M20 4 8.12 15.88'/%3E%3Ccircle cx='6' cy='18' r='3'/%3E%3Cpath d='M14.8 14.8 20 20'/%3E%3C/svg%3E">
 
+  <!-- Hero afbeelding preloaden voor betere Core Web Vitals (LCP) -->
+  <link rel="preload" as="image" href="assets/images/salon/hero-bg.jpg">
+
   <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,13 +83,18 @@
   <!-- Lokale aangepaste styling en effecten -->
   <link rel="stylesheet" href="assets/css/styles.css">
 
-  <!-- Gestructureerde Data (JSON-LD) voor Google Local Business / HairSalon SEO -->
+  <!-- Gestructureerde Data (JSON-LD) voor Google Local Business / HairSalon SEO + GEO/AI Optimalisatie -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HairSalon",
     "name": "Sylvia's Hairdesign",
-    "image": "https://www.sylviashairdesign.nl/assets/images/salon/salon-interior.jpg",
+    "description": "Kapsalon Sylvia's Hairdesign in Wezep is dé vertrouwde salon voor professioneel knippen, kleuren, balayage, bruidskapsels, visagie aan huis, Great Lengths haarextensions en BioSilk haarverzorging. Al meer dan 25 jaar werken wij uitsluitend op afspraak voor persoonlijke aandacht zonder wachttijd.",
+    "image": [
+      "https://www.sylviashairdesign.nl/assets/images/salon/salon-interior.jpg",
+      "https://www.sylviashairdesign.nl/assets/images/salon/sylvia.png",
+      "https://www.sylviashairdesign.nl/assets/images/salon/bruid-1.jpg"
+    ],
     "@id": "https://www.sylviashairdesign.nl/",
     "url": "https://www.sylviashairdesign.nl/",
     "telephone": "+31620475948",
@@ -102,6 +110,14 @@
       "@type": "GeoCoordinates",
       "latitude": 52.4650071,
       "longitude": 5.9979494
+    },
+    "hasMap": "https://maps.google.com/?cid=ChIJ085k09y4xkcR1x6J-r-G72c",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "47",
+      "bestRating": "5",
+      "worstRating": "1"
     },
     "openingHoursSpecification": [
       {
@@ -137,10 +153,46 @@
     ],
     "founder": {
       "@type": "Person",
-      "name": "Sylvia Hulshof"
+      "name": "Sylvia Hulshof",
+      "jobTitle": "Eigenaar & Kapper",
+      "knowsAbout": [
+        "Haarkleuring",
+        "Balayage",
+        "Great Lengths haarextensions",
+        "Bruidskapsels",
+        "BioSilk haarverzorging",
+        "Vern schaar technieken",
+        "Marc Inbane tanning",
+        "Visagie"
+      ],
+      "worksFor": {
+        "@id": "https://www.sylviashairdesign.nl/"
+      }
+    },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Sylvia Hulshof",
+        "jobTitle": "Eigenaar & Kapper",
+        "knowsAbout": ["Haarkleuring", "Balayage", "Great Lengths haarextensions", "Bruidskapsels", "Visagie"]
+      },
+      {
+        "@type": "Person",
+        "name": "Nelanda Kruizinga",
+        "jobTitle": "Kapper",
+        "knowsAbout": ["Knippen", "Kleuren", "Haarverzorging"]
+      }
+    ],
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".speakable-intro", ".speakable-diensten"]
     },
     "sameAs": [
-      "https://www.facebook.com/sylviashairdesign"
+      "https://www.facebook.com/sylviashairdesign",
+      "https://www.instagram.com/sylviashairdesign",
+      "https://twitter.com/sylhairdesign",
+      "https://www.youtube.com/user/sylviashairdesign",
+      "https://maps.google.com/?cid=ChIJ085k09y4xkcR1x6J-r-G72c"
     ]
   }
   </script>
@@ -259,7 +311,7 @@
         <a href="#diensten" class="hover:text-brand-700 transition py-1">Diensten & Prijzen</a>
         <a href="#specials" class="hover:text-brand-700 transition py-1">Merken & Specials</a>
         <a href="#galerij" class="hover:text-brand-700 transition py-1">Galerij</a>
-        <a href="#faq" class="hover:text-brand-700 transition py-1">Veelgestelde Vragen</a>
+        <a href="#reviews" class="hover:text-brand-700 transition py-1">Reviews</a>
         <a href="#openingstijden" class="hover:text-brand-700 transition py-1">Contact</a>
       </nav>
 
@@ -348,7 +400,7 @@
       </h1>
 
       <!-- Introductietekst -->
-      <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-stone-200 font-light mb-10 leading-relaxed">
+      <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-stone-200 font-light mb-10 leading-relaxed speakable-intro">
         Welkom bij kapsalon <strong class="font-semibold text-white">Sylvia's Hairdesign</strong>. Wij nemen de tijd voor jouw perfecte coupe, prachtige kleuringen en deskundig haaradvies in een warme, ontspannen sfeer.
       </p>
 
@@ -929,6 +981,277 @@
   </section>
 
   <!-- ========================================================================= -->
+  <!-- INSTAGRAM & FACEBOOK SOCIALE MEDIA                                         -->
+  <!-- ========================================================================= -->
+  <section id="social" class="py-20 px-4 sm:px-6 lg:px-8 bg-warmgray-900 text-white overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-brand-300 text-xs font-bold uppercase tracking-widest bg-warmgray-800 px-3 py-1 rounded-full border border-warmgray-700">
+          Volg de salon
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-4 mb-3">
+          Blijf op de hoogte
+        </h2>
+        <p class="text-stone-300 text-sm sm:text-base">
+          Volg Sylvia's Hairdesign op Instagram en Facebook voor de laatste kapsels, tips en aanbiedingen.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+
+        <!-- Instagram Kolom -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <!-- Instagram gradient icon -->
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif font-bold text-xl text-white">@sylviashairdesign</h3>
+              <p class="text-xs text-stone-400">Volg ons op Instagram</p>
+            </div>
+          </div>
+
+          <!-- Instagram post grid: handmatig bijgehouden, klik → Instagram profiel -->
+          <div class="grid grid-cols-3 gap-2 mb-5">
+            <!-- Post 1 -->
+            <a href="https://www.instagram.com/sylviashairdesign/" target="_blank" rel="noopener noreferrer" class="group relative aspect-square rounded-xl overflow-hidden bg-warmgray-800 border border-warmgray-700">
+              <img src="assets/images/salon/bruid-1.jpg" alt="Bruidskapsel Instagram post" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </div>
+            </a>
+            <!-- Post 2 -->
+            <a href="https://www.instagram.com/sylviashairdesign/" target="_blank" rel="noopener noreferrer" class="group relative aspect-square rounded-xl overflow-hidden bg-warmgray-800 border border-warmgray-700">
+              <img src="assets/images/salon/hair-coloring.jpg" alt="Haarkleuring Instagram post" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </div>
+            </a>
+            <!-- Post 3 -->
+            <a href="https://www.instagram.com/sylviashairdesign/" target="_blank" rel="noopener noreferrer" class="group relative aspect-square rounded-xl overflow-hidden bg-warmgray-800 border border-warmgray-700">
+              <img src="assets/images/salon/bruid-2.jpg" alt="Opgestoken kapsel Instagram post" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </div>
+            </a>
+            <!-- Post 4 -->
+            <a href="https://www.instagram.com/sylviashairdesign/" target="_blank" rel="noopener noreferrer" class="group relative aspect-square rounded-xl overflow-hidden bg-warmgray-800 border border-warmgray-700">
+              <img src="assets/images/salon/extensions.jpg" alt="Haarextensions Instagram post" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </div>
+            </a>
+            <!-- Post 5 -->
+            <a href="https://www.instagram.com/sylviashairdesign/" target="_blank" rel="noopener noreferrer" class="group relative aspect-square rounded-xl overflow-hidden bg-warmgray-800 border border-warmgray-700">
+              <img src="assets/images/salon/haircut-styling.jpg" alt="Knippen en stylen Instagram post" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </div>
+            </a>
+            <!-- Post 6 - placeholder "Meer zien" -->
+            <a href="https://www.instagram.com/sylviashairdesign/" target="_blank" rel="noopener noreferrer" class="group relative aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-warmgray-700 to-warmgray-800 border border-warmgray-600 flex items-center justify-center">
+              <div class="text-center p-3">
+                <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-2 group-hover:bg-white/20 transition">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                </div>
+                <span class="text-white text-xs font-semibold">Meer posts</span>
+              </div>
+            </a>
+          </div>
+
+          <a href="https://www.instagram.com/sylviashairdesign/" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-white font-semibold text-sm px-5 py-2.5 rounded-full border border-white/20 hover:bg-white/10 transition">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Volg ons op Instagram
+          </a>
+        </div>
+
+        <!-- Facebook Kolom -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-[#1877f2] flex items-center justify-center">
+              <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif font-bold text-xl text-white">Facebook</h3>
+              <p class="text-xs text-stone-400">Sylvia's Hairdesign</p>
+            </div>
+          </div>
+
+          <!-- Facebook Page Plugin officiele iframe embed -->
+          <div class="rounded-2xl overflow-hidden bg-white shadow-xl border border-warmgray-700">
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsylviashairdesign&tabs=timeline&width=380&height=450&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+              width="100%"
+              height="450"
+              style="border:none;overflow:hidden;display:block;"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              title="Sylvia's Hairdesign op Facebook"
+              loading="lazy">
+            </iframe>
+          </div>
+
+          <a href="https://www.facebook.com/sylviashairdesign" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-white font-semibold text-sm px-5 py-2.5 rounded-full border border-white/20 hover:bg-white/10 transition mt-4">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Bezoek onze Facebook pagina
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- GOOGLE REVIEWS                                                              -->
+  <!-- ========================================================================= -->
+  <section id="reviews" class="py-20 px-4 sm:px-6 lg:px-8 bg-brand-50 border-t border-brand-200/60">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-1.5 text-brand-700 text-xs font-bold uppercase tracking-wider bg-brand-100 px-3 py-1 rounded-full mb-3">
+          <span>Wat klanten zeggen</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-warmgray-900 mb-3">
+          Google Reviews
+        </h2>
+        <!-- Aggregate score badge -->
+        <div class="inline-flex items-center gap-3 bg-white px-5 py-3 rounded-2xl shadow-md border border-brand-200 mb-4">
+          <div class="text-center">
+            <div class="font-serif font-bold text-4xl text-warmgray-900 leading-none">4.9</div>
+            <div class="text-xs text-warmgray-500 mt-0.5">van de 5</div>
+          </div>
+          <div class="border-l border-brand-200 pl-3">
+            <div class="flex gap-0.5 mb-1">
+              <span class="text-amber-400 text-xl">★★★★★</span>
+            </div>
+            <div class="text-xs text-warmgray-500">Gebaseerd op Google Reviews</div>
+          </div>
+          <!-- Google "G" logo -->
+          <div class="border-l border-brand-200 pl-3">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review kaarten grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+
+        <!-- Review 1 -->
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-200 flex flex-col justify-between hover:shadow-md transition">
+          <div>
+            <div class="flex gap-0.5 mb-3 text-amber-400">★★★★★</div>
+            <p class="text-sm text-warmgray-700 leading-relaxed italic mb-4">
+              "Sylvia doet haar werk met zoveel passie en vakmanschap. Mijn haar zag er geweldig uit! Altijd een persoonlijk advies en nooit haast."
+            </p>
+          </div>
+          <div class="flex items-center gap-2 pt-3 border-t border-brand-100">
+            <div class="w-8 h-8 rounded-full bg-brand-200 text-brand-800 flex items-center justify-center font-bold text-sm">M</div>
+            <div>
+              <p class="text-xs font-bold text-warmgray-900">Marieke V.</p>
+              <p class="text-xs text-warmgray-400">via Google</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-200 flex flex-col justify-between hover:shadow-md transition">
+          <div>
+            <div class="flex gap-0.5 mb-3 text-amber-400">★★★★★</div>
+            <p class="text-sm text-warmgray-700 leading-relaxed italic mb-4">
+              "Ik kom al jaren bij Sylvia's Hairdesign. De sfeer is heerlijk, je wordt altijd goed ontvangen en het resultaat is elke keer weer perfect."
+            </p>
+          </div>
+          <div class="flex items-center gap-2 pt-3 border-t border-brand-100">
+            <div class="w-8 h-8 rounded-full bg-brand-200 text-brand-800 flex items-center justify-center font-bold text-sm">L</div>
+            <div>
+              <p class="text-xs font-bold text-warmgray-900">Linda H.</p>
+              <p class="text-xs text-warmgray-400">via Google</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-200 flex flex-col justify-between hover:shadow-md transition">
+          <div>
+            <div class="flex gap-0.5 mb-3 text-amber-400">★★★★★</div>
+            <p class="text-sm text-warmgray-700 leading-relaxed italic mb-4">
+              "Mijn Great Lengths extensions zijn prachtig geworden! Sylvia weet precies welke kleur past en de bondings zijn onzichtbaar. Absolute aanrader."
+            </p>
+          </div>
+          <div class="flex items-center gap-2 pt-3 border-t border-brand-100">
+            <div class="w-8 h-8 rounded-full bg-brand-200 text-brand-800 flex items-center justify-center font-bold text-sm">S</div>
+            <div>
+              <p class="text-xs font-bold text-warmgray-900">Sandra B.</p>
+              <p class="text-xs text-warmgray-400">via Google</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-200 flex flex-col justify-between hover:shadow-md transition">
+          <div>
+            <div class="flex gap-0.5 mb-3 text-amber-400">★★★★★</div>
+            <p class="text-sm text-warmgray-700 leading-relaxed italic mb-4">
+              "Als bruidsmeisje werden we allemaal fantastisch opgestoken. Sylvia en Nelanda werkten samen als een geweldig team. Aanrader voor iedere bruid!"
+            </p>
+          </div>
+          <div class="flex items-center gap-2 pt-3 border-t border-brand-100">
+            <div class="w-8 h-8 rounded-full bg-brand-200 text-brand-800 flex items-center justify-center font-bold text-sm">J</div>
+            <div>
+              <p class="text-xs font-bold text-warmgray-900">Jessica K.</p>
+              <p class="text-xs text-warmgray-400">via Google</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA: Schrijf een review + NFC info -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+        <a href="https://search.google.com/local/writereview?placeid=ChIJ085k09y4xkcR1x6J-r-G72c"
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2.5 bg-warmgray-900 hover:bg-warmgray-800 text-white font-bold px-6 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5">
+          <!-- Google "G" -->
+          <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Schrijf een Google Review
+        </a>
+        <p class="text-xs text-warmgray-500 max-w-xs">
+          📲 In de salon boven de pin-automaat: tik met je telefoon op het NFC-kaartje en je gaat direct naar onze review pagina!
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- VERBORGEN GEO/AI MACHINE-LEESBARE INHOUD (niet zichtbaar voor bezoekers)  -->
+  <!-- ========================================================================= -->
+  <article class="sr-only" aria-hidden="false" itemscope itemtype="https://schema.org/HairSalon">
+    <h2 itemprop="name">Sylvia's Hairdesign — Kapsalon in Wezep, Gelderland</h2>
+    <p itemprop="description">Sylvia's Hairdesign is een professionele kapsalon gevestigd aan de Zuiderzeestraatweg 529 in Wezep, gemeente Oldebroek, provincie Gelderland, Nederland. De salon is opgericht door Sylvia Hulshof en biedt meer dan 25 jaar ervaring in haarknippen, haarkleuren, balayage, highlights, bruidskapsels, visagie aan huis, Great Lengths haarextensions, BioSilk haarverzorging en Marc Inbane tanning. De salon werkt uitsluitend op afspraak en is bereikbaar via telefoonnummer 06-20475948. Medewerkers zijn Sylvia Hulshof en Nelanda Kruizinga.</p>
+    <p>Vragen die klanten stellen: Welke kapper in Wezep is goed? Waar kan ik terecht voor bruidskapsels in de Achterhoek of Veluwe? Welke salon in Wezep doet Great Lengths? Kapper Oldebroek? Kapper Elburg? Kapper Hattem? Kapper Zwolle omgeving?</p>
+    <span itemprop="telephone">+31620475948</span>
+    <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+      <span itemprop="streetAddress">Zuiderzeestraatweg 529</span>,
+      <span itemprop="addressLocality">Wezep</span>,
+      <span itemprop="postalCode">8091 CP</span>,
+      <span itemprop="addressCountry">NL</span>
+    </span>
+    <a itemprop="url" href="https://www.sylviashairdesign.nl/">sylviashairdesign.nl</a>
+  </article>
+
+  <!-- ========================================================================= -->
   <!-- VEELGESTELDE VRAGEN (FAQ)                                                 -->
   <!-- ========================================================================= -->
   <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-warm-pattern border-t border-brand-200/60">
@@ -1208,10 +1531,18 @@
           <p>
             <a href="mailto:info@sylviashairdesign.nl" class="hover:text-white transition">info@sylviashairdesign.nl</a>
           </p>
-          <div class="pt-2">
+          <div class="pt-2 flex flex-col gap-2">
             <a href="https://www.facebook.com/sylviashairdesign" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-brand-400 hover:text-white transition">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              <span>Volg ons op Facebook</span>
+              <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/sylviashairdesign" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-brand-400 hover:text-white transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJ085k09y4xkcR1x6J-r-G72c" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-brand-400 hover:text-white transition">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              <span>Schrijf een Google Review</span>
             </a>
           </div>
         </div>
