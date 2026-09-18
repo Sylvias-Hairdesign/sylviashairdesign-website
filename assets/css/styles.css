@@ -163,12 +163,6 @@ body {
   transform: rotate(180deg);
 }
 
-/* Blog Styling */
-.blog-badge {
-  background: rgba(163, 122, 68, 0.12);
-  color: #876233;
-}
-
 /* Print optimalisaties */
 @media print {
   header, footer, .mobile-bottom-bar, #lightbox-modal, .no-print {

@@ -52,3 +52,5 @@ Sylvia's Hairdesign/
 ## 🚀 Live previewen op je computer
 
 Je hebt geen speciale server nodig. Dubbelklik simpelweg op `index.html` in de Windows Verkenner om de website direct in Chrome, Edge of Firefox te openen!
+
+© 2026 Sylvia's Hair Design. Alle rechten voorbehouden.
