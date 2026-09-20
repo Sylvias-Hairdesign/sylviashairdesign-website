@@ -208,7 +208,7 @@
         "name": "Werken jullie uitsluitend op afspraak? En wat als er niet direct wordt opgenomen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja, wij kiezen er bewust voor om uitsluitend op afspraak te werken. Op deze manier garanderen we dat er nooit wachttijden zijn en dat we alle tijd, rust en persoonlijke aandacht voor jou en je kapsel hebben. Omdat we tijdens behandelingen onze volledige aandacht aan de klant in de stoel schenken, nemen we de telefoon niet direct op. Spreek gerust je naam en telefoonnummer in of stuur een bericht via WhatsApp naar 06-20475948; we bellen of antwoorden je altijd zo snel mogelijk terug!"
+          "text": "Ja, wij kiezen er bewust voor om uitsluitend op afspraak te werken. Op deze manier garanderen we dat er nooit wachttijden zijn en dat we alle tijd, rust en persoonlijke aandacht voor jou en je kapsel hebben. Omdat we tijdens behandelingen onze volledige aandacht aan de klant in de stoel schenken, nemen we de telefoon niet direct op. Spreek gerust je naam en telefoonnummer in; we bellen je altijd zo snel mogelijk terug!"
         }
       },
       {
@@ -369,9 +369,6 @@
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
         038 - 376 29 88
       </a>
-      <a href="https://wa.me/31383762988" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-emerald-600 text-white py-2.5 rounded-xl font-medium text-sm">
-        <span>Stuur een WhatsApp</span>
-      </a>
     </div>
   </div>
 
@@ -509,35 +506,53 @@
             <span class="italic font-normal text-brand-700">waar je even heerlijk tot rust komt</span>
           </h2>
 
-          <blockquote class="border-l-4 border-brand-500 pl-4 py-1 italic text-warmgray-700 text-base sm:text-lg">
-            "Als eigenaresse van Sylvia's Hairdesign ben ik trots op ons team dat elke dag vakkundig werk levert en met plezier op de werkvloer staat. Wij streven ernaar dat elke klant met een mooie coupe en een ontspannen gevoel de deur uitgaat."
-          </blockquote>
+          <div class="team-tabs mt-8">
+            <!-- Team Navigatie (Klikbaar) -->
+            <div class="flex flex-wrap gap-6 mb-6 border-b border-brand-200">
+              <button class="team-tab-btn active pb-3 border-b-2 border-brand-700 font-serif font-bold text-warmgray-900 text-lg sm:text-xl transition-colors text-left" data-target="sylvia-story">
+                Sylvia Hulshof <span class="block text-xs sm:text-sm text-warmgray-500 font-sans font-normal mt-0.5">Eigenaresse & Hairstylist</span>
+              </button>
+              <button class="team-tab-btn pb-3 border-b-2 border-transparent text-warmgray-500 hover:text-warmgray-800 font-serif font-bold text-lg sm:text-xl transition-colors text-left opacity-70 hover:opacity-100" data-target="nelanda-story">
+                Nelanda Kruizinga <span class="block text-xs sm:text-sm text-warmgray-500 font-sans font-normal mt-0.5">Allround Hairstylist</span>
+              </button>
+            </div>
 
-          <div class="text-warmgray-600 space-y-4 text-sm sm:text-base leading-relaxed">
-            <p>
-              Toen ik twintig was, ben ik gestart met mijn eigen kapsalon aan de Zuiderzeestraatweg in Wezep. Tot op de dag van vandaag oefen ik samen met mijn team het kappersvak met onverminderde passie, zorg en liefde uit.
-            </p>
-            <p>
-              Of je nu komt voor een verfrissende knipbeurt, een prachtige nieuwe haarkleur, een vakkundige haarverlenging met <em>Great Lengths</em> of een feestelijk bruidskapsel: wij luisteren goed naar jouw wensen en geven eerlijk advies dat écht bij jouw haar en persoonlijkheid past.
-            </p>
+            <!-- Sylvia's Verhaal -->
+            <div id="sylvia-story" class="team-story block animate-fade-in">
+              <blockquote class="border-l-4 border-brand-500 pl-4 py-1 italic text-warmgray-700 text-base sm:text-lg mb-6">
+                "Als eigenaresse van Sylvia's Hairdesign ben ik trots op ons team dat elke dag vakkundig werk levert en met plezier op de werkvloer staat. Wij streven ernaar dat elke klant met een mooie coupe en een ontspannen gevoel de deur uitgaat."
+              </blockquote>
+              <div class="text-warmgray-600 space-y-4 text-sm sm:text-base leading-relaxed">
+                <p>
+                  Toen ik twintig was, ben ik gestart met mijn eigen kapsalon aan de Zuiderzeestraatweg in Wezep. Tot op de dag van vandaag oefen ik samen met mijn team het kappersvak met onverminderde passie, zorg en liefde uit.
+                </p>
+                <p>
+                  Of je nu komt voor een verfrissende knipbeurt, een prachtige nieuwe haarkleur, een vakkundige haarverlenging met <em>Great Lengths</em> of een feestelijk bruidskapsel: wij luisteren goed naar jouw wensen en geven eerlijk advies dat écht bij jouw haar en persoonlijkheid past.
+                </p>
+              </div>
+            </div>
+
+            <!-- Nelanda's Verhaal -->
+            <div id="nelanda-story" class="team-story hidden animate-fade-in">
+              <blockquote class="border-l-4 border-brand-500 pl-4 py-1 italic text-warmgray-700 text-base sm:text-lg mb-6">
+                "Creativiteit en persoonlijke aandacht staan voor mij voorop. Ik vind het geweldig om mensen te laten stralen met een kapsel dat perfect bij hen past."
+              </blockquote>
+              <div class="text-warmgray-600 space-y-4 text-sm sm:text-base leading-relaxed">
+                <p>
+                  Als allround hairstylist bij Sylvia's Hairdesign sta ik met veel enthousiasme voor u klaar. Met jarenlange ervaring in het kappersvak volg ik de nieuwste trends en technieken op de voet, zodat ik u altijd kan voorzien van het beste advies en resultaat.
+                </p>
+                <p>
+                  Mijn specialiteit ligt bij kleuringen en moderne snittechnieken. Ik neem graag de tijd om uw wensen te bespreken, want een tevreden glimlach in de spiegel is waar ik het allemaal voor doe!
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div class="pt-4 flex flex-wrap items-center gap-6 border-t border-brand-200/80">
-            <div>
-              <p class="font-serif font-bold text-warmgray-900 text-lg">Sylvia Hulshof</p>
-              <p class="text-xs text-warmgray-500">Eigenaresse & Hairstylist</p>
-            </div>
-            <div class="h-8 w-px bg-brand-200"></div>
-            <div>
-              <p class="font-serif font-bold text-warmgray-900 text-lg">Nelanda Kruizinga</p>
-              <p class="text-xs text-warmgray-500">Allround Hairstylist</p>
-            </div>
-            <div class="ml-auto">
-              <a href="#contact" class="text-sm font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1 group">
-                Kom kennismaken
-                <svg class="w-4 h-4 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-              </a>
-            </div>
+          <div class="pt-4 border-t border-brand-200/80">
+            <a href="#contact" class="text-sm font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1 group">
+              Kom kennismaken
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
           </div>
 
         </div>
@@ -733,9 +748,6 @@
             <a href="tel:0383762988" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-full transition shadow-xs">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg> 038 - 376 29 88
             </a>
-            <a href="https://wa.me/31383762988" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-full transition shadow-xs">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg> WhatsApp
-            </a>
           </div>
         </div>
 
@@ -744,7 +756,7 @@
             <span class="shrink-0 text-amber-600 bg-amber-100 p-1.5 rounded-full"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
             <p class="text-sm text-warmgray-800 leading-relaxed">
               <strong class="text-amber-900 block mb-0.5 text-base">Even niet direct gehoor?</strong> 
-              Als we met een klant in de stoel bezig zijn, nemen we de telefoon niet direct op om alle rust en aandacht te behouden. Spreek gerust je naam en nummer in of stuur een bericht via WhatsApp naar <a href="tel:0383762988" class="font-bold text-amber-700 underline">038 - 376 29 88</a>; we bellen of berichten je zo snel mogelijk terug!
+              Als we met een klant in de stoel bezig zijn, nemen we de telefoon niet direct op om alle rust en aandacht te behouden. Spreek gerust je naam en nummer in; we bellen je zo snel mogelijk terug!
             </p>
           </div>
         </div>
@@ -1230,7 +1242,7 @@
                 Ja, wij kiezen er bewust voor om uitsluitend op afspraak te werken. Op deze manier garanderen we dat er nooit wachttijden zijn en dat we alle tijd, rust en persoonlijke aandacht voor jou en je kapsel hebben.
               </p>
               <p>
-                <strong>Belangrijk over onze bereikbaarheid:</strong> Omdat we tijdens behandelingen onze volledige aandacht aan de klant in de stoel schenken, nemen we de telefoon niet altijd direct op. Spreek gerust je naam en telefoonnummer in of stuur een bericht via WhatsApp naar <a href="tel:0620475948" class="text-brand-700 font-bold underline">06 - 20 47 59 48</a>; we bellen of antwoorden je altijd zo snel mogelijk terug!
+                <strong>Belangrijk over onze bereikbaarheid:</strong> Omdat we tijdens behandelingen onze volledige aandacht aan de klant in de stoel schenken, nemen we de telefoon niet altijd direct op. Spreek gerust je naam en telefoonnummer in; we bellen je altijd zo snel mogelijk terug!
               </p>
             </div>
           </div>
@@ -1364,16 +1376,12 @@
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <h3 class="font-serif font-bold text-xl sm:text-2xl">Afspraak maken?</h3>
-                <p class="text-xs sm:text-sm text-brand-100 mt-1">Bel met Sylvia of stuur eenvoudig een WhatsApp berichtje.</p>
+                <p class="text-xs sm:text-sm text-brand-100 mt-1">Bel met Sylvia om direct een afspraak in te plannen.</p>
               </div>
               <div class="flex flex-wrap gap-2 shrink-0">
                 <a href="tel:0383762988" class="whitespace-nowrap bg-white text-brand-800 hover:bg-brand-50 px-5 py-2.5 rounded-full font-bold text-sm shadow-md transition transform hover:scale-105 flex items-center gap-2">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                   038 - 376 29 88
-                </a>
-                <a href="https://wa.me/31383762988" target="_blank" rel="noopener noreferrer" class="whitespace-nowrap bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-full font-semibold text-sm shadow-md transition flex items-center gap-2">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-                  WhatsApp
                 </a>
               </div>
             </div>
@@ -1381,7 +1389,7 @@
               <span class="shrink-0 text-amber-300 bg-white/10 p-1.5 rounded-full"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
               <p class="text-sm text-brand-50">
                 <strong class="text-white block mb-0.5 text-base">Geen direct gehoor?</strong> 
-                Tijdens behandelingen nemen we de telefoon niet direct op om de rust in de salon te bewaren. Spreek je nummer in of app ons; we bellen je altijd zo snel mogelijk terug!
+                Tijdens behandelingen nemen we de telefoon niet direct op om de rust in de salon te bewaren. Spreek je nummer in; we bellen je altijd zo snel mogelijk terug!
               </p>
             </div>
           </div>
@@ -1420,16 +1428,15 @@
               <div class="w-8 h-8 rounded-lg bg-brand-200 text-brand-800 flex items-center justify-center mb-3">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
               </div>
-              <h4 class="font-bold text-warmgray-900 text-sm">Telefoon & WhatsApp</h4>
+              <h4 class="font-bold text-warmgray-900 text-sm">Telefoon</h4>
               <p class="text-xs text-warmgray-600 mt-1">Direct contact of terugbelverzoek</p>
               <div class="mt-3 flex flex-col space-y-1">
                 <a href="tel:0383762988" class="text-xs font-bold text-brand-700 hover:underline flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg> 038 - 376 29 88</a>
-                <a href="https://wa.me/31383762988" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-emerald-700 hover:underline flex items-center gap-1.5"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg> Stuur een WhatsApp →</a>
               </div>
               <div class="mt-4 bg-amber-50 border border-amber-200/70 p-3 rounded-lg flex items-start gap-2.5">
                 <span class="shrink-0 text-amber-500 mt-0.5"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
                 <p class="text-xs text-amber-900 leading-snug font-medium">
-                  Nemen we niet direct op? We staan bij een klant en bellen of appen je zo snel mogelijk terug!
+                  Nemen we niet direct op? We staan bij een klant en bellen je zo snel mogelijk terug!
                 </p>
               </div>
             </div>
@@ -1534,16 +1541,13 @@
   </footer>
 
   <!-- ========================================================================= -->
-  <!-- VASTE MOBIELE ONDERBALK MET DIRECTE BEL-KNOP                              -->
+  <!-- FLOATING CONTACT & SOCIALS BAR (Alleen Mobiel)                            -->
   <!-- ========================================================================= -->
-  <div class="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-brand-200 p-3 z-40 md:hidden mobile-bottom-bar shadow-2xl">
-    <div class="flex items-center gap-2 max-w-md mx-auto">
-      <a href="tel:0620475948" class="flex-1 flex items-center justify-center gap-2 bg-brand-600 active:bg-brand-700 text-white font-bold py-3 px-4 rounded-xl shadow-md text-sm">
+  <div class="fixed bottom-4 left-0 right-0 px-4 z-40 sm:hidden">
+    <div class="bg-white/90 backdrop-blur-md border border-brand-200 shadow-xl rounded-2xl p-2.5 flex items-center justify-between">
+      <a href="tel:0383762988" class="flex-1 flex items-center justify-center gap-2 bg-brand-600 text-white py-3 rounded-xl font-bold shadow-md mr-2 text-sm">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-        <span>Bel direct: 06 - 20 47 59 48</span>
-      </a>
-      <a href="https://wa.me/31620475948" target="_blank" rel="noopener noreferrer" aria-label="Stuur WhatsApp" class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-md">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.187 1.564 5.945l-1.664 6.083 6.257-1.64c1.704.928 3.652 1.455 5.727 1.455 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
+        <span>Bel: 038 - 376 29 88</span>
       </a>
     </div>
   </div>

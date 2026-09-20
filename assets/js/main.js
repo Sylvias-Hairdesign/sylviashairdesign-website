@@ -16,7 +16,43 @@ document.addEventListener('DOMContentLoaded', () => {
   initPriceFilter();
   initBackToTop();
   initFaqAccordion();
+  initTeamTabs();
 });
+
+/* ==========================================================================
+   Team Tabs Functionaliteit
+   ========================================================================== */
+function initTeamTabs() {
+  const tabBtns = document.querySelectorAll('.team-tab-btn');
+  const teamStories = document.querySelectorAll('.team-story');
+
+  if (!tabBtns.length || !teamStories.length) return;
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+
+      // Update button states
+      tabBtns.forEach(b => {
+        b.classList.remove('active', 'border-brand-700', 'text-warmgray-900');
+        b.classList.add('border-transparent', 'text-warmgray-500', 'opacity-70');
+      });
+      btn.classList.add('active', 'border-brand-700', 'text-warmgray-900');
+      btn.classList.remove('border-transparent', 'text-warmgray-500', 'opacity-70');
+
+      // Update story visibility
+      teamStories.forEach(story => {
+        if (story.id === targetId) {
+          story.classList.remove('hidden');
+          story.classList.add('block');
+        } else {
+          story.classList.add('hidden');
+          story.classList.remove('block');
+        }
+      });
+    });
+  });
+}
 
 /* ==========================================================================
    1. Real-time Openingstijden & Status Indicator
