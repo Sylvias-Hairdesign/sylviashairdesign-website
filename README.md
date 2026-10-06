@@ -25,7 +25,7 @@ Alle prijzen staan overzichtelijk in het bestand `index.html`. Je kunt dit besta
 
 - **Openingstijden tekst:** Zoek in `index.html` naar `id="openingstijden"` en pas de tijden aan in de tabel.
 - **Real-time 'Nu Open' indicator:** De openingstijden voor de automatische live checker staan in `assets/js/main.js` bovenaan in het blok `salonSchedule`. Pas daar indien nodig de begin- of eindtijd in minuten aan.
-- **Telefoonnummer:** Het telefoonnummer is ingesteld op `06 - 20 47 59 48` (`tel:0620475948`). Wil je dit ooit wijzigen? Zoek dan in `index.html` naar `0620475948` en vervang het overal.
+- **Telefoonnummer:** Het telefoonnummer is ingesteld op `038 - 376 29 88` (`tel:0383762988`). Wil je dit ooit wijzigen? Zoek dan in `index.html` naar `0383762988` en vervang het overal.
 
 ---
 
@@ -34,6 +34,9 @@ Alle prijzen staan overzichtelijk in het bestand `index.html`. Je kunt dit besta
 ```
 Sylvia's Hairdesign/
 ├── index.html              # De complete pagina (Hero, Over ons, Prijzen, Galerij, Contact, SEO)
+├── review.html             # Google Review redirect pagina (NFC & QR-code)
+├── _headers                # Security headers voor Cloudflare Pages & Netlify
+├── .htaccess               # Security headers & serverconfiguratie voor Apache
 ├── assets/
 │   ├── css/
 │   │   └── styles.css      # Kleurenschema, animaties en styling

@@ -133,10 +133,12 @@ function initOpeningHours() {
   // Render status in de DOM
   const renderBadge = (element) => {
     if (!element) return;
-    element.innerHTML = `
-      <span class="status-dot ${isOpen ? 'open' : 'closed'}"></span>
-      <span class="font-medium ${isOpen ? 'text-emerald-700' : 'text-amber-800'}">${statusText}</span>
-    `;
+    const dot = document.createElement('span');
+    dot.className = `status-dot ${isOpen ? 'open' : 'closed'}`;
+    const text = document.createElement('span');
+    text.className = `font-medium ${isOpen ? 'text-emerald-700' : 'text-amber-800'}`;
+    text.textContent = statusText;
+    element.replaceChildren(dot, text);
   };
 
   renderBadge(statusBadge);
@@ -212,7 +214,9 @@ function initGalleryLightbox() {
       const img = item.querySelector('img');
       const caption = item.getAttribute('data-caption') || (img ? img.alt : '');
       const fullSrc = item.getAttribute('data-full-src') || (img ? img.src : '');
-      if (fullSrc) openLightbox(fullSrc, caption);
+      if (fullSrc && !fullSrc.toLowerCase().trim().startsWith('javascript:')) {
+        openLightbox(fullSrc, caption);
+      }
     });
   });
 

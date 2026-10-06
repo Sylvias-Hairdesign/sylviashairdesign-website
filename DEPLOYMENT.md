@@ -49,3 +49,10 @@ Hieronder staan de 2 beste en eenvoudigste methoden.
 
 ## Tip: Oude Weebly / Frame doorverwijzing opheffen
 De huidige `sylviashairdesign.nl` laadt nu een verborgen HTML-frame die doorlinkt naar een Weebly-subdomein. Zodra je de DNS CNAME koppelt aan Cloudflare Pages of Netlify, vervalt dit trage frame en laadt de nieuwe moderne site direct, snel en veilig!
+
+---
+
+## 🔒 Beveiligingsconfiguratie (Security Headers)
+Het project bevat vooraf geconfigureerde beveiligingsheaders:
+- `_headers`: Automatisch actief op **Cloudflare Pages** en **Netlify**. Bevat HSTS, Content Security Policy (CSP), X-Frame-Options, X-Content-Type-Options, Referrer-Policy en Permissions-Policy.
+- `.htaccess`: Actief op **Apache / LiteSpeed** webhosting (bij bijv. TransIP, Hostnet, Antagonist). Schakelt dezelfde beveiligingsheaders in en blokkeert directory browsing (`Options -Indexes`).

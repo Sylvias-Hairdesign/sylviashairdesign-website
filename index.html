@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https://www.sylviashairdesign.nl; frame-src https://www.google.com https://www.facebook.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests;">
   
   <!-- Primaire SEO Meta Tags -->
   <title>Sylvia's Hairdesign | Kapsalon in Wezep - Dames, Heren & Kinderen</title>
   <meta name="title" content="Sylvia's Hairdesign | Kapsalon in Wezep - Dames, Heren & Kinderen">
-  <meta name="description" content="Kapsalon Sylvia's Hairdesign in Wezep. Dé salon voor professioneel knippen, kleuren, Great Lengths haarverlenging, bruidskapsels en BioSilk verzorging. Maak een afspraak: 06-20475948.">
+  <meta name="description" content="Kapsalon Sylvia's Hairdesign in Wezep. Dé salon voor professioneel knippen, kleuren, Great Lengths haarverlenging, bruidskapsels en BioSilk verzorging. Maak een afspraak: 038-3762988.">
   <meta name="keywords" content="kapsalon wezep, kapper wezep, sylvia's hairdesign, sylvia hulshof, knippen wezep, haarverlenging wezep, great lengths, biosilk, bruidskapsel wezep, balayage wezep">
   <meta name="author" content="Sylvia's Hairdesign">
   <meta name="robots" content="index, follow">
@@ -17,7 +20,7 @@
   <meta property="og:type" content="business.business">
   <meta property="og:url" content="https://www.sylviashairdesign.nl/">
   <meta property="og:title" content="Sylvia's Hairdesign | Kapsalon in Wezep">
-  <meta property="og:description" content="Persoonlijke aandacht, vakkundig advies en topkwaliteit haarverzorging in Wezep. Bel voor een afspraak: 06-20475948.">
+  <meta property="og:description" content="Persoonlijke aandacht, vakkundig advies en topkwaliteit haarverzorging in Wezep. Bel voor een afspraak: 038-3762988.">
   <meta property="og:image" content="https://www.sylviashairdesign.nl/assets/images/salon/salon-interior.jpg">
   <meta property="og:locale" content="nl_NL">
 
@@ -25,7 +28,7 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.sylviashairdesign.nl/">
   <meta property="twitter:title" content="Sylvia's Hairdesign | Kapsalon Wezep">
-  <meta property="twitter:description" content="Dé eigentijdse kapsalon in Wezep voor knippen, kleuren, bruidskapsels en extensions. Bel direct 06-20475948.">
+  <meta property="twitter:description" content="Dé eigentijdse kapsalon in Wezep voor knippen, kleuren, bruidskapsels en extensions. Bel direct 038-3762988.">
   <meta property="twitter:image" content="https://www.sylviashairdesign.nl/assets/images/salon/salon-interior.jpg">
 
   <!-- Favicon & Touch Icon -->
@@ -37,7 +40,7 @@
   <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Tailwind CSS via Play CDN (Zero build overhead, modernste CSS utility engine) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -114,8 +117,8 @@
     "hasMap": "https://maps.google.com/?cid=ChIJ085k09y4xkcR1x6J-r-G72c",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "47",
+      "ratingValue": "4.5",
+      "reviewCount": "31",
       "bestRating": "5",
       "worstRating": "1"
     },
@@ -1047,6 +1050,7 @@
               frameborder="0"
               allowfullscreen="true"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
               title="Sylvia's Hairdesign op Facebook"
               loading="lazy">
             </iframe>
@@ -1077,19 +1081,20 @@
           Google Reviews
         </h2>
         <!-- Aggregate score badge -->
-        <div class="inline-flex items-center gap-3 bg-white px-5 py-3 rounded-2xl shadow-md border border-brand-200 mb-4">
+        <div class="inline-flex items-center gap-3 bg-white px-6 py-4 rounded-2xl shadow-md border border-brand-200 mb-8">
           <div class="text-center">
-            <div class="font-serif font-bold text-4xl text-warmgray-900 leading-none">4.9</div>
+            <div class="font-serif font-bold text-4xl text-warmgray-900 leading-none">4.5</div>
             <div class="text-xs text-warmgray-500 mt-0.5">van de 5</div>
           </div>
-          <div class="border-l border-brand-200 pl-3">
+          <div class="border-l border-brand-200 pl-4 text-left">
             <div class="flex gap-0.5 mb-1">
-              <span class="text-amber-400 text-xl">★★★★★</span>
+              <!-- 4.5 stars visually -->
+              <span class="text-amber-400 text-xl">★★★★<span class="opacity-50">★</span></span>
             </div>
-            <div class="text-xs text-warmgray-500">Gebaseerd op Google Reviews</div>
+            <div class="text-xs text-warmgray-500">Gebaseerd op <b>31</b> Google Reviews</div>
           </div>
           <!-- Google "G" logo -->
-          <div class="border-l border-brand-200 pl-3">
+          <div class="border-l border-brand-200 pl-4 ml-1">
             <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
@@ -1098,79 +1103,6 @@
             </svg>
           </div>
         </div>
-      </div>
-
-      <!-- Review kaarten grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-
-        <!-- Review 1 -->
-        <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-200 flex flex-col justify-between hover:shadow-md transition">
-          <div>
-            <div class="flex gap-0.5 mb-3 text-amber-400">★★★★★</div>
-            <p class="text-sm text-warmgray-700 leading-relaxed italic mb-4">
-              "Sylvia doet haar werk met zoveel passie en vakmanschap. Mijn haar zag er geweldig uit! Altijd een persoonlijk advies en nooit haast."
-            </p>
-          </div>
-          <div class="flex items-center gap-2 pt-3 border-t border-brand-100">
-            <div class="w-8 h-8 rounded-full bg-brand-200 text-brand-800 flex items-center justify-center font-bold text-sm">M</div>
-            <div>
-              <p class="text-xs font-bold text-warmgray-900">Marieke V.</p>
-              <p class="text-xs text-warmgray-400">via Google</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-200 flex flex-col justify-between hover:shadow-md transition">
-          <div>
-            <div class="flex gap-0.5 mb-3 text-amber-400">★★★★★</div>
-            <p class="text-sm text-warmgray-700 leading-relaxed italic mb-4">
-              "Ik kom al jaren bij Sylvia's Hairdesign. De sfeer is heerlijk, je wordt altijd goed ontvangen en het resultaat is elke keer weer perfect."
-            </p>
-          </div>
-          <div class="flex items-center gap-2 pt-3 border-t border-brand-100">
-            <div class="w-8 h-8 rounded-full bg-brand-200 text-brand-800 flex items-center justify-center font-bold text-sm">L</div>
-            <div>
-              <p class="text-xs font-bold text-warmgray-900">Linda H.</p>
-              <p class="text-xs text-warmgray-400">via Google</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-200 flex flex-col justify-between hover:shadow-md transition">
-          <div>
-            <div class="flex gap-0.5 mb-3 text-amber-400">★★★★★</div>
-            <p class="text-sm text-warmgray-700 leading-relaxed italic mb-4">
-              "Mijn Great Lengths extensions zijn prachtig geworden! Sylvia weet precies welke kleur past en de bondings zijn onzichtbaar. Absolute aanrader."
-            </p>
-          </div>
-          <div class="flex items-center gap-2 pt-3 border-t border-brand-100">
-            <div class="w-8 h-8 rounded-full bg-brand-200 text-brand-800 flex items-center justify-center font-bold text-sm">S</div>
-            <div>
-              <p class="text-xs font-bold text-warmgray-900">Sandra B.</p>
-              <p class="text-xs text-warmgray-400">via Google</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 4 -->
-        <div class="bg-white rounded-2xl p-5 shadow-sm border border-brand-200 flex flex-col justify-between hover:shadow-md transition">
-          <div>
-            <div class="flex gap-0.5 mb-3 text-amber-400">★★★★★</div>
-            <p class="text-sm text-warmgray-700 leading-relaxed italic mb-4">
-              "Als bruidsmeisje werden we allemaal fantastisch opgestoken. Sylvia en Nelanda werkten samen als een geweldig team. Aanrader voor iedere bruid!"
-            </p>
-          </div>
-          <div class="flex items-center gap-2 pt-3 border-t border-brand-100">
-            <div class="w-8 h-8 rounded-full bg-brand-200 text-brand-800 flex items-center justify-center font-bold text-sm">J</div>
-            <div>
-              <p class="text-xs font-bold text-warmgray-900">Jessica K.</p>
-              <p class="text-xs text-warmgray-400">via Google</p>
-            </div>
-          </div>
-        </div>
-
       </div>
 
       <!-- CTA: Schrijf een review + NFC info -->
@@ -1195,9 +1127,9 @@
   <!-- ========================================================================= -->
   <article class="sr-only" aria-hidden="false" itemscope itemtype="https://schema.org/HairSalon">
     <h2 itemprop="name">Sylvia's Hairdesign — Kapsalon in Wezep, Gelderland</h2>
-    <p itemprop="description">Sylvia's Hairdesign is een professionele kapsalon gevestigd aan de Zuiderzeestraatweg 529 in Wezep, gemeente Oldebroek, provincie Gelderland, Nederland. De salon is opgericht door Sylvia Hulshof en biedt meer dan 25 jaar ervaring in haarknippen, haarkleuren, balayage, highlights, bruidskapsels, visagie aan huis, Great Lengths haarextensions, BioSilk haarverzorging en Marc Inbane tanning. De salon werkt uitsluitend op afspraak en is bereikbaar via telefoonnummer 06-20475948. Medewerkers zijn Sylvia Hulshof en Nelanda Kruizinga.</p>
+    <p itemprop="description">Sylvia's Hairdesign is een professionele kapsalon gevestigd aan de Zuiderzeestraatweg 529 in Wezep, gemeente Oldebroek, provincie Gelderland, Nederland. De salon is opgericht door Sylvia Hulshof en biedt meer dan 25 jaar ervaring in haarknippen, haarkleuren, balayage, highlights, bruidskapsels, visagie aan huis, Great Lengths haarextensions, BioSilk haarverzorging en Marc Inbane tanning. De salon werkt uitsluitend op afspraak en is bereikbaar via telefoonnummer 038-3762988. Medewerkers zijn Sylvia Hulshof en Nelanda Kruizinga.</p>
     <p>Vragen die klanten stellen: Welke kapper in Wezep is goed? Waar kan ik terecht voor bruidskapsels in de Achterhoek of Veluwe? Welke salon in Wezep doet Great Lengths? Kapper Oldebroek? Kapper Elburg? Kapper Hattem? Kapper Zwolle omgeving?</p>
-    <span itemprop="telephone">+31620475948</span>
+    <span itemprop="telephone">+31383762988</span>
     <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
       <span itemprop="streetAddress">Zuiderzeestraatweg 529</span>,
       <span itemprop="addressLocality">Wezep</span>,
@@ -1453,6 +1385,7 @@
               style="border:0;" 
               allowfullscreen="" 
               loading="lazy" 
+              sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>

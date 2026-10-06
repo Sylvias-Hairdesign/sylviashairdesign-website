@@ -1,0 +1,32 @@
+# =========================================================================
+# Sylvia's Hairdesign - Apache / LiteSpeed Security Configuration
+# =========================================================================
+
+<IfModule mod_headers.c>
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Prevent clickjacking / frame embedding
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Strict Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Restrict sensitive browser features & APIs
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+    # Enforce HTTPS with HSTS (1 year + subdomains + preload)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Content Security Policy (CSP)
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https://www.sylviashairdesign.nl; frame-src https://www.google.com https://www.facebook.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'; upgrade-insecure-requests;"
+</IfModule>
+
+# Disable directory browsing
+Options -Indexes
+
+# Protect hidden files and folders (.git, .env, etc.)
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
