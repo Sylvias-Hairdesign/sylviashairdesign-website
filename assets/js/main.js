@@ -64,7 +64,7 @@ function initOpeningHours() {
     0: null,                                      // Zondag: Gesloten
     1: null,                                      // Maandag: Gesloten
     2: { open: 8 * 60 + 30, close: 17 * 60 + 30, text: '08:30 - 17:30' }, // Dinsdag
-    3: { open: 8 * 60 + 30, close: 15 * 60 + 0,  text: '08:30 - 15:00' }, // Woensdag
+    3: null,                                      // Woensdag: Gesloten
     4: { open: 8 * 60 + 30, close: 17 * 60 + 30, text: '08:30 - 17:30' }, // Donderdag
     5: { open: 8 * 60 + 30, close: 17 * 60 + 30, text: '08:30 - 17:30' }, // Vrijdag
     6: { open: 8 * 60 + 30, close: 12 * 60 + 30, text: '08:30 - 12:30' }, // Zaterdag
