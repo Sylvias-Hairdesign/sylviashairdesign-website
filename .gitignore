@@ -1,11 +1,14 @@
-# OS generated files
+# Operating System
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 .DS_Store
+*.tmp
+*.bak
+*.swp
 
-# Editor files
+# IDEs & Editors
 .vscode/
 .idea/
 *.suo
@@ -13,3 +16,26 @@ $RECYCLE.BIN/
 *.njsproj
 *.sln
 *.sw?
+*.sublime-workspace
+*.sublime-project
+
+# Node & Package Managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & Secrets
+.env
+*.env
+.env.*
+
+# Local & Scratch files
+scratch/
+logs/
+*.log
+.temp/
+.tmp/
+temp/
+tmp/
+.cache/
